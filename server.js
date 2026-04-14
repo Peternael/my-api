@@ -8,8 +8,12 @@ app.get("/", (req, res) => {
 });
 
 app.post("/ai-video", (req, res) => {
-  console.log(req.body);
-  res.json({ status: "done ✅" });
+  console.log("Data:", req.body);
+
+  res.json({
+    message: "وصلت البيانات ✅",
+    data: req.body
+  });
 });
 
 const PORT = process.env.PORT || 3000;
